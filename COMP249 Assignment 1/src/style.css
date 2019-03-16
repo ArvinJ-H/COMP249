@@ -1,0 +1,120 @@
+html {
+  font-family: Trebuchet MS, sans-serif;
+  background-color: white;
+}
+
+body {
+  margin: 0px;
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: 2rem;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  padding: 0;
+  margin: 0;
+  width: 100%
+}
+
+nav li {
+  color: white !important;
+  display: inline-block;
+  line-height: 40px;
+}
+
+nav ul {
+  list-style: none;
+  width: auto;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover {
+  background-color: grey;
+}
+
+nav a.active {
+  background-color: none;
+  color: none;
+}
+
+.menu {
+  text-align: left;
+}
+
+.menu li {
+  padding: 0px 5px;
+}
+
+.account-menu {
+  text-align: right;
+  margin-right: 0px;
+}
+
+.account-menu li {
+  padding: 0px 5px;
+}
+
+ul {
+  vertical-align: middle;
+}
+
+li {
+  background-position: 100%;
+}
+
+#product-search-form {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+}
+
+#promotional-text {
+  text-align: middle;
+  background-color: grey;
+
+}
+
+#promotional-text p {
+  position: relative;
+  left: 25%;
+  width: 50%;
+  color: white;
+}
+
+#promotional-text p a {
+  color: black;
+  text-decoration: none;
+}
+
+footer {
+  background-color: grey;
+  color: white;
+}
+
+footer p {
+  font-size: 0.5rem;
+  color: black;
+  text-align: right;
+}
+
+#signupform {}
+
+.social h2 {
+  text-align: left;
+}
+
+.social ul li a {
+  color: white;
+  padding: 0;
+  text-align: right;
+  text-decoration: none;
+}
