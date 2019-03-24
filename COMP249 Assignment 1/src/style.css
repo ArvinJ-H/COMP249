@@ -7,9 +7,19 @@ body {
   margin: 0px;
 }
 
+h2 {
+  font-size: 2vw;
+}
+
+p {
+  font-size: 2vw;
+}
+
 h1 {
   text-align: center;
+  color: black;
   letter-spacing: 2rem;
+  margin-top: 0;
 }
 
 nav {
@@ -17,24 +27,29 @@ nav {
   color: white;
   padding: 0;
   margin: 0;
-  width: 100%
+  width: 100%;
+  display: -webkit-box;
 }
 
 nav li {
   color: white !important;
   display: inline-block;
-  line-height: 40px;
+  font-size: 1.5vw;
 }
 
 nav ul {
   list-style: none;
   width: auto;
+  margin: 0;
 }
+
+
 
 nav a {
   color: white;
   text-decoration: none;
   display: block;
+  padding: 10px;
 }
 
 nav a:hover {
@@ -46,8 +61,12 @@ nav a.active {
   color: none;
 }
 
+
+
 .menu {
   text-align: left;
+  padding-left: 10px;
+  width: 50%;
 }
 
 .menu li {
@@ -55,8 +74,10 @@ nav a.active {
 }
 
 .account-menu {
+  display: block;
+  padding-left: 0;
+  width: 30%;
   text-align: right;
-  margin-right: 0px;
 }
 
 .account-menu li {
@@ -71,45 +92,166 @@ li {
   background-position: 100%;
 }
 
-#product-search-form {
-  display: inline-block;
-  vertical-align: middle;
-  text-align: right;
+img {
+  width: 30%;
+  padding-left: 10px;
 }
 
-#promotional-text {
-  text-align: middle;
+button {
+  background-color: white;
+  color: black;
+}
+
+.featured {
+  display: block;
   background-color: grey;
-
 }
 
-#promotional-text p {
+.image {
+  display: inline;
+}
+
+.product-detail {
+  display: inline;
+  float: right;
   position: relative;
-  left: 25%;
-  width: 50%;
-  color: white;
+  left: 15rem;
+  width: fit-content;
+  top: 4rem;
+  font-size: 2vw;
 }
 
-#promotional-text p a {
+.featured h2 {
+  margin: 20px 0 4px 0;
+  background-color: white;
+  text-align: center;
+}
+
+.description {
+  display: inline;
+  float: right;
+  position: relative;
+  left: -34%;
+  width: 30%;
+  top: 4rem;
+  font-size: 2vw;
+}
+
+.productlist {
+  text-align: center;
+}
+
+.product {
+  display: inline-block;
+  width: 24%;
+  margin: 2px;
+  background-color: #f3f1f1;
+  padding: 0 0 5px 0;
+}
+
+.product h2 a {
   color: black;
   text-decoration: none;
 }
 
-footer {
-  background-color: grey;
-  color: white;
-}
-
-footer p {
-  font-size: 0.5rem;
-  color: black;
+#special-offer {
   text-align: right;
 }
 
-#signupform {}
+#special-offer p {
+  font-size: 0.5vw;
+
+}
+
+
+#promo ul {
+  display: block;
+  text-decoration: none;
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+
+}
+
+#promo ul li {
+  display: inline;
+  padding: 15px;
+}
+
+#promo ul li a:hover {
+  cursor: default;
+}
+
+#promo ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+}
+
+#product-search-form {
+  height: 100%;
+  margin-top: 1%;
+  display: block;
+  vertical-align: middle;
+  text-align: right;
+}
+
+#promotional-text {}
+
+#promotional-text p {
+  padding: 0 10%;
+  color: black;
+}
+
+#promotional-text p a {
+  color: black;
+  text-decoration: underline;
+}
+
+#promotional-text p a:hover {
+  cursor: pointer;
+}
+
+footer {
+  background-color: black;
+  color: black;
+}
+
+footer p {
+  display: inline;
+  font-size: 0.5rem;
+  color: white;
+  text-align: right;
+}
+
+#signupform {
+  display: inline;
+  text-align: right;
+}
+
+#signupform button span {
+  color: black;
+}
+
+#signupform span {
+  color: white;
+}
 
 .social h2 {
+  color: white;
   text-align: left;
+}
+
+.social ul {
+  display: block;
+  padding-left: 0;
+  margin: 0;
+}
+
+.social ul li {
+  display: inline;
+  list-style: none;
+  padding: 0 10px 0 0;
 }
 
 .social ul li a {
