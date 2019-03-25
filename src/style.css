@@ -1,3 +1,7 @@
+/* Author: Arvin Han
+
+44195702 */
+
 html {
   font-family: Trebuchet MS, sans-serif;
   background-color: white;
@@ -19,8 +23,17 @@ h1 {
   text-align: center;
   color: black;
   letter-spacing: 2rem;
-  margin-top: 0;
+  font-size: 2.5vw;
 }
+
+.product .image :hover {
+  width: 70%;
+}
+
+form input {
+  background-color: white;
+}
+
 
 nav {
   background-color: black;
@@ -104,7 +117,14 @@ button {
 
 .featured {
   display: block;
-  background-color: grey;
+  background-color: #f5f5dc;
+  border-style: inset;
+  border-width: 1px;
+}
+
+.featured img {
+  width: 20%;
+  padding-left: 10%;
 }
 
 .image {
@@ -112,29 +132,22 @@ button {
 }
 
 .product-detail {
-  display: inline;
-  float: right;
-  position: relative;
-  left: 15rem;
-  width: fit-content;
-  top: 4rem;
+  display: inline-block;
+  width: 25%;
   font-size: 2vw;
 }
 
 .featured h2 {
   margin: 20px 0 4px 0;
-  background-color: white;
+  background-color: #f5f5dc;
   text-align: center;
 }
 
 .description {
-  display: inline;
-  float: right;
-  position: relative;
-  left: -34%;
+  display: inline-block;
   width: 30%;
-  top: 4rem;
   font-size: 2vw;
+  padding-bottom: 3px;
 }
 
 .productlist {
@@ -145,13 +158,20 @@ button {
   display: inline-block;
   width: 24%;
   margin: 2px;
-  background-color: #f3f1f1;
   padding: 0 0 5px 0;
 }
 
-.product h2 a {
+.product:hover {
+  background-color: #f3f1f1;
+}
+
+h2>a {
   color: black;
   text-decoration: none;
+}
+
+.product input {
+  width: 50%;
 }
 
 #special-offer {
@@ -159,7 +179,7 @@ button {
 }
 
 #special-offer p {
-  font-size: 0.5vw;
+  font-size: 0.8vw;
 
 }
 
@@ -189,6 +209,7 @@ button {
 }
 
 #product-search-form {
+  width: 15%;
   height: 100%;
   margin-top: 1%;
   display: block;
@@ -196,11 +217,13 @@ button {
   text-align: right;
 }
 
-#promotional-text {}
+#product-search-form input {
+  width: 85px;
+}
 
 #promotional-text p {
   padding: 0 10%;
-  color: black;
+  color: grey;
 }
 
 #promotional-text p a {
@@ -259,4 +282,11 @@ footer p {
   padding: 0;
   text-align: right;
   text-decoration: none;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .featured img {
+    padding-left: 5%;
+  }
 }
