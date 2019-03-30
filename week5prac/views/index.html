@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Application</title>
+    <style>
+        form ul li ul li {
+            list-style-type: none;
+        }
+        form ul li ul li input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Enrolment Data</h2>
+
+    <section>
+    <form method="POST" action="/units">
+        <fieldset>
+        <ul>
+           <li>Name: <input name='name'></li>
+           <li>Units:
+                <ul>
+                <li><input type='checkbox' name='unit' value='COMP225'>COMP225</input></li>
+                <li><input type='checkbox' name='unit' value='COMP247'>COMP247</input></li>
+                <li><input type='checkbox' name='unit' value='COMP249'>COMP249</input></li>
+                <li><input type='checkbox' name='unit' value='COMP260'>COMP260</input></li>
+                </ul>
+           </li>
+        </ul>
+        <input type='submit' value='Submit Form'>
+        </fieldset>
+    </form>
+    </section>
+
+    <section>
+    <h2>Current Database Content</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Unit</th>
+        </tr>
+        % for item in data:
+        <tr>
+            <td> {{item[0]}} </td>
+            <td> {{item[1]}} </td>
+        </tr>
+        % end
+    </table>
+
+
+    </section>
+
+</body>
+</html>
