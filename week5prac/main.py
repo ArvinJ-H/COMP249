@@ -1,10 +1,10 @@
 __author__ = 'Arvin Han'
 
-import bottle
+from bottle import Bottle, debug, static_file, template, request, redirect, response
 import os
 import model
-app = bottle.Bottle()
-bottle.debug(True)
+app = Bottle()
+# Bottle.debug(True)
 
 @app.route('/')
 def root():
@@ -12,7 +12,18 @@ def root():
     db = model.connect()
     data = model.list_enrolments(db)
 
-    return bottle.template('index.html',data=data)
+    return template('index.html',data=data)
+
+
+def hello_again():
+    cookie = request.get_cookie(visited)
+    if cookie:
+        count = int(count)+1
+        response.set_cookie("visited",str(count))
+        return "welcomeback"+ str(count) + "time"
+
+    response.set_cookie("visited", "1")
+    return "Nice to meet you"
 
 
 @app.route('/create')
@@ -20,19 +31,18 @@ def create():
     db = model.connect()
     model.create_tables(db)
     db.close()
-    bottle.redirect('/')
-
+    redirect('/')
 
 
 
 @app.route('/units',method="POST")
 def unit():
     db = model.connect()
-    name = bottle.request.forms.get('name')
-    for unit in bottle.request.forms.getall('unit'):
+    name = request.forms.get('name')
+    for unit in request.forms.getall('unit'):
         model.add_enrollment(db,name,unit)
     db.close()
-    bottle.redirect('/')
+    redirect('/')
 
 if __name__ == "__main__":
     #
