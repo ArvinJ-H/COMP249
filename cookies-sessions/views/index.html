@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+    <h1>{{title}}</h1>
+
+    <form action="/like" method="POST">
+
+        <label for="name">What is your name?</label>
+        <input name="name">
+
+        <label for="thing">What do you like?</label>
+        <input name="thing">
+        <input type="submit">
+    </form>
+
+
+    <ul>
+        % for like in likes:
+        <li>{{like[0]}} likes {{like[1]}}</li>
+        % end
+    </ul>
+
+
+</body>
+</html>
